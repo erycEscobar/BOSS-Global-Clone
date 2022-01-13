@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #e8e8e8;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 2px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+/* --- NAVBAR --- */
+
+.Navbar {
+    list-style: none;
+    padding: 0%;
+    background-color: black;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Navbar .bLogo {
+    background-color: #0064ff;
+}
+
+.Navbar .Logo {
+    width: 110px;
+}
+
+.Navbar li a {
+    text-decoration: none;
+    color: #e5e5e5;
+    padding: 20px;
+    display: block;
+}
+
+.Navbar li {
+    display: inline-block;
+    text-align: center;
+}
+
+.Navbar li a:hover {
+    background-color: #444343;
+}
+
+/* --- CARROUSEL --- */
+
+#contCarrousel {
+    height: 500px;
+    overflow: hidden;
+}
+
+.itemCarrousel {
+    height: 100%;
+    position: relative;
+}
+
+.imgCarrousel {
+    height: 100%;
+}
+
+.imgCarrousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flechasCarrousel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.flechasCarrousel a i {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border: rgb(90, 90, 90) 2px solid;
+    color: rgb(192, 192, 192);
+    justify-content: center;
+    align-items: center;
+}
+
+#contPuntos {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contPuntos a {
+    text-decoration: none;
+    font-size: 3em;
+    color: black;
+}
+
+/* --- GALERIA DE SECCIONES --- */
+
+.galeriaProductos {
+    background-color: white;
+}
+
+h5 {
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 40px;
+}
+
+.linea {
+    background: #444343;
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.imageGaleria {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.imageOver {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.imageOver * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.imageOver:hover {
+    opacity: 1;
+}
+
+.imageOver:hover * {
+    transform: translateY(0);
+}
+
+.imgTitle {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
+
+.Footer {
+    width: 100%;
+    background: #141414;
+}
+
+.Footer .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.Footer .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.Footer .grupo-1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.Footer .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.Footer .grupo-1 .box .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #0d2033 ;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.Footer .grupo-1 .box .red-social a:hover {
+    color: aqua;
+}
+
+.Footer .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+
+.Footer .grupo-2 small {
+    font-size: 15px;
+}
+
+/* --- CONTACTO --- */
+
+.FormularioContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media screen and (max-width: 800px) {
+    .Navbar{
+        flex-direction: column;
+    }
+
+    .Footer .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}

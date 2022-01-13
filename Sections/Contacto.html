@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <title>BOSS CONTACTO</title>
+    <!-- ICONOS -->
+    <script src="https://kit.fontawesome.com/192a4adb36.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <!-- HEADER -->
+        <header>
+            <!-- NAVBAR -->
+            <ul class="Navbar">
+                <li class="bLogo"><a href="../Index.html"><img class="Logo" src="../Assets/BOSS Logo.png" alt=""></a></li>
+                <li><a href="./Productos.html">PRODUCTOS</a></li>
+                <li><a href="./Tienda.html">TIENDA</a></li>
+                <li><a href="./Comercios.html">COMERCIOS</a></li>
+                <li><a href="./Historia.html">HISTORIA</a></li>
+                <li><a href="./Contacto.html">CONTACTO</a></li>
+            </ul> 
+            <!-- CARROUSEL -->
+            <div id="contCarrousel">
+                <div class="itemCarrousel" id="itemCarrousel-1">
+                    <div class="imgCarrousel" id="imgCarrousel-1">
+                        <img src="../Assets/carousel_sd-1.jpg" alt="IMAGEN BOSS SD-1">
+                    </div>
+                    <div class="flechasCarrousel">
+                        <a href="#itemCarrousel-3">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <a href="#itemCarrousel-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="itemCarrousel" id="itemCarrousel-2">
+                    <div class="imgCarrousel" id="imgCarrousel-2">
+                        <img src="../Assets/carousel_mt-2.jpg" alt="IMAGEN BOSS MT-2">
+                    </div>
+                    <div class="flechasCarrousel">
+                        <a href="#itemCarrousel-1">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <a href="#itemCarrousel-3">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="itemCarrousel" id="itemCarrousel-3">
+                    <div class="imgCarrousel" id="imgCarrousel-3">
+                        <img src="../Assets/carousel_waza_pedal.jpg" alt="IMAGEN BOSS WAZA PEDALS">
+                    </div>
+                    <div class="flechasCarrousel">
+                        <a href="#itemCarrousel-2">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <a href="#itemCarrousel-1">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="contPuntos">
+                <a href="#itemCarrousel-1">•</a>
+                <a href="#itemCarrousel-2">•</a>
+                <a href="#itemCarrousel-3">•</a>
+            </div>
+        </header>
+        
+        <!-- SECCIONES -->
+        <main>
+            <div class="FormularioContacto">
+                <form action="#" method="get">
+                    <fieldset>
+                        <legend>Info Personal</legend>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="user_name" id="name" placeholder="Introduzca Su Nombre">
+                        <br>
+                        <label for="lastname">Apellido</label>
+                        <input type="text" name="user_lastname" id="lastname" placeholder="Introduzca Su Apellido">
+                        <br>
+                        <label for="idnumber">DNI</label>
+                        <input type="number" name="user_idnumber" id="idnumber" placeholder="Introduzca Su DNI">
+                        <br>
+                        <label for="mail">Correo Electronico</label>
+                        <input type="email" name="user_mail" id="mail" placeholder="Introduzca Su Correo Electronico">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Info Tributaria</legend>
+                        <label for="userafip">Tipo De Facturador</label>
+                        <select name="user_afip" id="userafip">
+                            <option value="Monotributo">Monotributo</option>
+                            <option value="Exento">Exento</option>
+                            <option value="Responsable Inscripto">Responsable Inscripto</option>
+                        </select>
+                    </fieldset>
+                    <input type="submit" value="ENVIAR">
+                    <input type="reset" value="BORRAR">
+                    <input type="button" value="NO HACE NADA">
+                </form>
+            </div>
+        </main>
+        
+        <!-- FOOTER -->
+        <footer class="Footer">
+            <div class="grupo-1">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="../Assets/BOSS Logo.png" alt="LOGO BOSS">
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, maiores!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, eligendi!</p>
+                </div>
+                <div class="box">
+                    <h2>SIGUENOS</h2>
+                    <div class="red-social">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo-2">
+                <small>&copy; 2021 <b>BOSS</b> - Todos Los Derechos Reservados.</small>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
