@@ -1,0 +1,33 @@
+/* --- NAVBAR --- */
+
+.Navbar {
+    list-style: none;
+    padding: 0%;
+    background-color: black;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    & .bLogo {
+        background-color: #0064ff;
+    }
+    
+    & .Logo {
+        width: 110px;
+    }
+    
+    & li {
+        display: inline-block;
+        text-align: center;
+        & a {
+            text-decoration: none;
+            color: #e5e5e5;
+            padding: 20px;
+            display: block;
+            &:hover {
+                background-color: #444343;
+            }
+        }
+    }        
+}

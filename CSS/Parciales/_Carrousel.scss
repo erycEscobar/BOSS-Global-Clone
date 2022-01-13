@@ -1,0 +1,52 @@
+/* --- CARROUSEL --- */
+
+#contCarrousel {
+    height: 500px;
+    overflow: hidden;
+}
+
+.itemCarrousel {
+    height: 100%;
+    position: relative;
+}
+
+.imgCarrousel {
+    height: 100%;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.flechasCarrousel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    & a i {
+        display: flex;
+        width: 25px;
+        height: 25px;
+        background-color: black;
+        border: rgb(90, 90, 90) 2px solid;
+        color: rgb(192, 192, 192);
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#contPuntos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & a {
+        text-decoration: none;
+        font-size: 3em;
+        color: rgb(85, 85, 85);
+    }
+}
