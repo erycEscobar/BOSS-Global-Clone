@@ -1,20 +1,30 @@
 /* --- NAVBAR --- */
 
+@import "./Maps";
+@import "./Mixins";
+
 .Navbar {
     list-style: none;
     padding: 0%;
-    background-color: black;
+    background-color: map-get($estilos, blackColor);
     max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: auto;
+    height: 70px;
+    display: grid; 
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    @include center;
+    /*align-content: center;
+    align-items: center;*/
     
     & .bLogo {
-        background-color: #0064ff;
+        background-color: map-get($estilos, blueColor);
+        object-fit: cover;
     }
     
     & .Logo {
-        width: 110px;
+        width: 150px; 
+        object-fit: cover;
     }
     
     & li {
@@ -22,11 +32,14 @@
         text-align: center;
         & a {
             text-decoration: none;
-            color: #e5e5e5;
+            color: #666;
             padding: 20px;
             display: block;
+            font-size: map-get($estilos, tFuente);
             &:hover {
                 background-color: #444343;
+                color: white;
+                transition: all 0.20s ease-out;
             }
         }
     }        

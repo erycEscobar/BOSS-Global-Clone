@@ -1,0 +1,55 @@
+@import "./Parciales/NavBar";
+@import "./Parciales/Carrousel";
+@import "./Parciales/GaleriaDeSecciones";
+@import "./Parciales/Footer";
+@import "./Parciales/FormContacto";
+@import "./Parciales/GaleriaIndex";
+@import "./Parciales/IndexGrids";
+@import "./Parciales/Extends";
+@import "./Parciales/Maps";
+@import "./Parciales/Mixins";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #e8e8e8;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    gap: 2px;
+    max-width: 86%;
+    margin: auto;
+    background-color: white;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media screen and (max-width: 800px) {
+    .Navbar{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .grid3Gallery .format {
+        flex-direction: column;
+
+    }
+
+    .Footer .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}

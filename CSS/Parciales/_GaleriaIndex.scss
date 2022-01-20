@@ -1,0 +1,58 @@
+/* --- GALERIA INDEX --- */
+
+.indexGalley {
+    background-color: white;
+}
+
+.indexGalley_format {
+
+    @extend .GridFormat;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    & img {
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+        object-fit: cover;
+    }
+
+    & .indexGalleyimg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+    
+    & .indexGalleyimageOver {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(41, 121, 187, 0.74);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+        &:hover {
+            opacity: 1;
+        }
+        & * {
+            transform: translateY(20px);
+            transition: transform 0.25s;
+        }
+        &:hover * {
+            transform: translateY(0);
+        }
+        & .indexGalleyimgTitle {
+            position: absolute;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    
+}

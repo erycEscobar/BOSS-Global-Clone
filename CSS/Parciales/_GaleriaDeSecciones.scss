@@ -12,20 +12,17 @@ h5 {
 }
 
 .linea {
-    background: #444343;
-    height: 5px;
-    width: 100%;
+    background: #999999;
+    height: 1px;
+    width: 90%;
     display: block;
+    margin: auto;
 }
 
 .galeria {
-    display: grid;
+    @extend .GridFormat;
     grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
-    width: 95%;
-    margin: auto;
-    grid-gap: 10px;
-    padding: 40px 0;
-    overflow: hidden;
+
     & img {
         width: 100%;
         height: 100%;
@@ -68,6 +65,7 @@ h5 {
 }
 
 .imgTitle {
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bold;
+    text-align: center;
 }

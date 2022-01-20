@@ -1,0 +1,60 @@
+/* INDEX GRIDS */
+
+.grid3Gallery {
+    background-color: white;
+    & .format {
+        display: flex;
+        width: 95%;
+        margin: auto;
+        gap: 10px;
+        padding: 50px 0px;
+        justify-content: center;
+        & .element {
+            & img {
+                vertical-align: top;
+                object-fit: cover;
+
+            }
+            & .subtitle {
+                font-weight: bold;
+                color: black;
+                font-size: 15px;
+                padding-top: 20px;
+            }
+            & .title {
+                font-weight: bold;
+                color: rgb(114, 114, 114);
+                padding-top: 5px;
+                font-size: 17px;
+            }
+            & .description {
+                width: 380px;
+                color: black;
+                font-size: 12px;
+                padding-top: 15px;
+                
+            }
+            & .moreBoton {
+                font-size: small;
+                & a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: black;
+                    & i {
+                        display: flex;
+                        width: 25px;
+                        height: 25px;
+                        background-color: black;
+                        border: rgba(212, 212, 212, 0.2) 4px solid;
+                        background-clip: padding-box; 
+                        color: rgb(192, 192, 192);
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                
+            }
+        }
+    }
+}
