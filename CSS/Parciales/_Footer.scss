@@ -1,63 +1,184 @@
 /* --- FOOTER --- */
 
-.Footer {
-    max-width: 97.7%;
-    margin: auto;
-    width: 100%;
-    background: #141414;
-    & .grupo-1 {
-        width: 100%;
-        max-width: 1200px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px;
-        padding: 45px 0px;
-        & .box {
-            & figure {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                & img {
-                    width: 250px;
-                }
-            }
-            & h2 {
-                color: white;
-                margin-bottom: 25px;
-                font-size: 20px;
-            }
-            & p {
-                color: #efefef;
-                margin-bottom: 10px;
-            }
-            & .red-social a {
-                display: inline-block;
-                text-decoration: none;
-                width: 45px;
-                height: 45px;
-                line-height: 45px;
-                color: white;
-                margin-right: 10px;
-                background-color: #0d2033 ;
-                text-align: center;
-                transition: all 300ms ease;
-                &:hover {
-                    color: aqua;
-                }
-            }
-        } 
-    }  
+.footFormat {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-rows: 1.5fr 1.5fr 8fr 5fr 2fr; 
+    gap: 0px 0px; 
+    position: relative;
+    margin: 0 auto;
+    min-width: 1024px;
+    max-width: 1600px;
+    background-color: #141414;
+    z-index: 1;
+}
 
-    & .grupo-2 {
-        background-color: #0a1a2a;
-        padding: 15px 10px;
-        text-align: center;
-        color: white;
-        & small {
-            font-size: 15px;
-        }
-    }
+.glInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1280px;
+    min-width: 1080px;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.glInfo ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glInfo ul li {
+    padding-right: 10px;
+}
+
+.glInfo ul li a {
+    color: #666;
+}
+
+.glInfo ul li a:hover {
+    color: #0064ff;
+}
+
+.glService {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #212121;
+    width: 100%;
+    max-width: 1280px;
+    min-width: 1080px;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.glService ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glService ul li a {
+    color: #666;
+    padding-right: 10px;
+}
+
+.glService ul li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footDirectory {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1280px;
+    min-width: 1080px;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.footDirectory h3 {
+    color: #666;
+    padding-bottom: 15px;
+}
+
+.footDirectory h3:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footDirectory ul li a {
+    color: #666;
+    display: block;
+    padding-bottom: 3px;
+}
+
+.footDirectory ul li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.column {
+    flex-grow: 1;
+}
+
+.fa-chevron-right {
+    color: #0064ff;
+    padding-right: 5px;
+}
+
+.fa-facebook-square {
+    color: blue;
+    background: white;
+}
+
+.fa-youtube {
+    background: white;
+    color: red;
+}
+
+.fa-globe-americas {
+    color: rgb(20, 89, 136);
+    background: white;
+}
+
+.footPromos {
+    width: 100%;
+    max-width: 1280px;
+    min-width: 1080px;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.footPromos ul {
+    display: flex;
+}
+
+.footLegal {
+    position: relative;
+    width: 980px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1280px;
+    min-width: 1080px;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.footLegal ul {
+    display: flex;
+}
+
+.footLegal ul li a {
+    display: block;
+    padding: 0px 10px 0px 10px;
+    border-right: 1px solid #212121;
+    color: #666;
+}
+
+.footLegal ul li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footLegal p {
+    font-size: .65rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #666;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
 }

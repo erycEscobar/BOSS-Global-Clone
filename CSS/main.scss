@@ -15,6 +15,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 
 body{
@@ -22,34 +23,125 @@ body{
     background-color: #e8e8e8;
 }
 
-.contenedor {
-    display: grid;
-    grid-template-rows: auto;
+.CommunityMain {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 0.5fr 1.5fr; 
+    grid-template-rows: 5.6fr 2.4fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    ". ."
+    ". ."; 
     justify-items: center;
-    gap: 2px;
-    max-width: 86%;
+}
+
+.CommunityMain div h4 {
+
+
+}
+
+.CommunityMain div h4 ul {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.CommunityMain div h4 ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CommunityMain div h4 ul li a {
+    color: #666;
+    padding: 20px;
+}
+
+.contenedor {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-rows: 0.5fr 2fr 0.5fr; 
+    gap: 0px 0px; 
+    justify-items: center;
+    min-width: 1024px;
+    max-width: 1600px;
     margin: auto;
     background-color: white;
+    overflow: hidden;
+}
+
+.stompBoxesCatalog {
+
+}
+
+.stompBoxesCatalog ul {
+    display: flex;
+    flex-direction: column;
+} 
+
+.stompBoxesCatalog ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.stompImgTittle {
+    position: absolute;
+    text-align: center;
+    font-size: 3rem;
 }
 
 /* --- MEDIA QUERIES --- */
 
 @media screen and (max-width: 800px) {
-    .Navbar{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
 
     .grid3Gallery .format {
         flex-direction: column;
 
     }
 
-    .Footer .grupo-1 {
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding: 35px 0px;
+
+}
+
+@media (max-width:768px) {
+
+    .navBar label {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        position: absolute;
+        background: black;
+        width: 100%;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        text-align: center;
+        margin-top: -70%;
+        transition: 0.5s ease-in;
+    }
+
+    #btn-menu:checked ~ .menu .nav-links {
+        margin: 0;
+        transition: 0.5s ease-out;
+    }
+
+    .subProducts {
+        background: black;
+    }
+
+    .menuProductsC3 {
+        display: none;
     }
 }

@@ -3,44 +3,316 @@
 @import "./Maps";
 @import "./Mixins";
 
-.Navbar {
-    list-style: none;
-    padding: 0%;
-    background-color: map-get($estilos, blackColor);
-    max-width: 100%;
-    margin: auto;
+.subProducts {
+    margin-top: -70%;
+    background: rgba(245, 245, 245, 0.9);
+    position: absolute;
+    display: flex;
+    width: 100%;
+    left: 0;
+}
+
+.menuProductsC1 {
+    padding-right: 40px;
+}
+
+.menuProductsC1 ul {
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+}
+
+.menuProductsC1 ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+}
+
+.menuProductsC1 ul li a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+    padding: 20px 100px 20px 0px;
+}
+
+.menuProductsC2 {
+    padding-right: 40px;
+}
+
+.menuProductsC2 ul {
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+}
+
+.menuProductsC2 ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+}
+
+.menuProductsC2 ul li a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+    padding: 20px 100px 20px 0px;
+}
+
+.menuProductsC3 ul {
+    flex-direction: row;
+}
+
+.menuProductsC3 ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuProductsC3 ul li a{
+    text-align: center;
+}
+
+.subCommunity {
+    margin-top: -70%;
+    background: rgba(245, 245, 245, 0.9);
+    position: absolute;
+    display: flex;
+    width: 100%;
+    left: 0;
+}
+
+.menuCommunityC1 {
+    padding-right: 40px;
+}
+
+.menuCommunityC1 ul {
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+}
+
+.menuCommunityC1 ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+}
+
+.menuCommunityC1 ul li a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+    padding: 20px 100px 20px 0px;
+}
+
+.menuCommunityC2 ul {
+    flex-direction: row;
+}
+
+.menuCommunityC2 ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuCommunityC2 ul li a{
+    text-align: center;
+}
+
+.nav-logo {
+    display: flex;
+    width: 170px;
+    background-color: #0064ff;
+}
+
+.subSupport {
+    margin-top: -70%;
+    background: rgba(245, 245, 245, 0.9);
+    position: absolute;
+    display: flex;
+    width: 100%;
+    left: 0;
+}
+
+.menuSupportC1 {
+    padding-right: 40px;
+}
+
+.menuSupportC1 ul {
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+}
+
+.menuSupportC1 ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+}
+
+.menuSupportC1 ul li a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+    padding: 20px 100px 20px 0px;
+}
+
+.menuSupportC2 ul {
+    flex-direction: row;
+}
+
+.menuSupportC2 ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuSupportC2 ul li a{
+    text-align: center;
+}
+
+.subArticles {
+    display: none;
+}
+
+/*---------------------------------------------*/
+
+.navBar {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 1024px;
+    max-width: 1600px;
     height: 70px;
-    display: grid; 
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr; 
-    gap: 0px 0px; 
-    @include center;
-    /*align-content: center;
-    align-items: center;*/
-    
-    & .bLogo {
-        background-color: map-get($estilos, blueColor);
-        object-fit: cover;
+    background-color: #000;
+    z-index: 10;
+}
+
+#btn-menu {
+   display: none;
+}
+
+.navBar label {
+    display: none;
+    background: white;
+}
+
+.navBar label:hover {
+    cursor: pointer;
+    background: rgba(100, 96, 96, 0.788);
+}
+
+.fa-bars {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links:hover {
+    background: rgba(100, 96, 96, 0.788);
+}
+
+.nav-links:hover ~ .subProducts{
+    margin: auto;
+    padding: 50px;
+}
+
+.subProducts:hover {
+    margin: auto;
+    padding: 50px;
+}
+
+.subProducts nav li:hover {
+    background: rgba(100, 96, 96, 0.788);
+}
+
+.nav-links:hover ~ .subCommunity{
+    margin: 0;
+    padding: 50px;
+}
+
+.subCommunity:hover {
+    margin: auto;
+    padding: 50px;
+}
+
+.subCommunity nav li:hover {
+    background: rgba(100, 96, 96, 0.788);
+}
+
+.nav-links:hover ~ .subSupport {
+    margin: 0;
+    padding: 50px;
+}
+
+.subSupport:hover {
+    margin: auto;
+    padding: 50px;
+}
+
+.subSupport nav li:hover {
+    background: rgba(100, 96, 96, 0.788);
+}
+
+
+.fa-bars:hover {
+    background: rgba(100, 96, 96, 0.788);
+}
+
+.nav-links {
+    display: block;
+    padding: 26px 130px;
+    color: white;
+    text-decoration: none;
+    border-right: 1px solid rgba(80, 80, 80, 0.3);
+}
+
+@media (max-width:768px) {
+
+    .navBar label {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        position: absolute;
+        background: black;
+        width: 100%;
     }
     
-    & .Logo {
-        width: 150px; 
-        object-fit: cover;
+    .menu ul {
+        flex-direction: column;
     }
     
-    & li {
-        display: inline-block;
+    .nav-links {
         text-align: center;
-        & a {
-            text-decoration: none;
-            color: #666;
-            padding: 20px;
-            display: block;
-            font-size: map-get($estilos, tFuente);
-            &:hover {
-                background-color: #444343;
-                color: white;
-                transition: all 0.20s ease-out;
-            }
-        }
-    }        
+        margin-top: -70%;
+        transition: 0.5s ease-in;
+    }
+
+    #btn-menu:checked ~ .menu .nav-links {
+        margin: 0;
+        transition: 0.5s ease-out;
+    }
+
+    .subProducts {
+        background: black;
+    }
+
+    .menuProductsC3 {
+        display: none;
+    }
 }
