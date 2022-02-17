@@ -8,7 +8,11 @@
 @import "./Parciales/Extends";
 @import "./Parciales/Maps";
 @import "./Parciales/Mixins";
-
+@import "./Parciales/Community";
+@import "./Parciales/StompBoxes";
+@import "./Parciales/Support";
+@import "./Parciales/Articles";
+@import "./Parciales/PromoGallery";
 
 * {
     padding: 0;
@@ -18,130 +22,35 @@
     list-style: none;
 }
 
-body{
+body {
     font-family: sans-serif;
-    background-color: #e8e8e8;
+    //background-color: red;
+    background-color: #e5e5e5;
 }
 
-.CommunityMain {
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 0.5fr 1.5fr; 
-    grid-template-rows: 5.6fr 2.4fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    ". ."
-    ". ."; 
-    justify-items: center;
-}
-
-.CommunityMain div h4 {
-
-
-}
-
-.CommunityMain div h4 ul {
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.CommunityMain div h4 ul li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.CommunityMain div h4 ul li a {
-    color: #666;
-    padding: 20px;
-}
+/* --------------------------------- */
 
 .contenedor {
+    position: relative;
     display: grid; 
     grid-auto-columns: 1fr; 
-    grid-template-rows: 0.5fr 2fr 0.5fr; 
+    grid-template-rows: auto auto auto;
     gap: 0px 0px; 
-    justify-items: center;
-    min-width: 1024px;
-    max-width: 1600px;
+    max-width: 1640px;
     margin: auto;
     background-color: white;
-    overflow: hidden;
-}
-
-.stompBoxesCatalog {
-
-}
-
-.stompBoxesCatalog ul {
-    display: flex;
-    flex-direction: column;
-} 
-
-.stompBoxesCatalog ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.stompImgTittle {
-    position: absolute;
-    text-align: center;
-    font-size: 3rem;
 }
 
 /* --- MEDIA QUERIES --- */
 
-@media screen and (max-width: 800px) {
+@media (max-width:1280px) {
 
-    .grid3Gallery .format {
-        flex-direction: column;
+}
 
-    }
-
+@media (max-width:1024px) {
 
 }
 
 @media (max-width:768px) {
 
-    .navBar label {
-        display: block;
-    }
-
-    .nav-mobile {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .menu {
-        position: absolute;
-        background: black;
-        width: 100%;
-    }
-    
-    .menu ul {
-        flex-direction: column;
-    }
-    
-    .nav-links {
-        text-align: center;
-        margin-top: -70%;
-        transition: 0.5s ease-in;
-    }
-
-    #btn-menu:checked ~ .menu .nav-links {
-        margin: 0;
-        transition: 0.5s ease-out;
-    }
-
-    .subProducts {
-        background: black;
-    }
-
-    .menuProductsC3 {
-        display: none;
-    }
 }

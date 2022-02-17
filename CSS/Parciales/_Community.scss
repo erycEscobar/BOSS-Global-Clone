@@ -1,0 +1,188 @@
+@import "./Extends";
+
+/* --- COMMUNITY --- */
+
+.heroImgCommunitySection {
+    @extend .positioning;
+    & img {
+        width: 100%;
+    }
+}
+
+.CommunityTittleBar {
+    & ul {
+        display: flex;
+        & li {
+
+        }
+    }
+}
+
+.CommunityMain {
+    @extend .positioning;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 20px 10px; 
+    grid-template-areas: "community face ."
+                         "social youTube .";
+    justify-items: center;
+    margin: 20px;
+    height: 800px;
+}
+
+.SocialMediaList {
+    grid-area: social;
+    position: relative;
+    left: -15px;
+    padding: 5px;
+    & h4 {
+        & span ul {
+            display: flex;
+            position: relative;
+            top: 30px;
+            & li {
+                display: block;
+                padding-right: 15px;
+            }
+        }
+    }
+
+}
+
+.FacebookImg {
+
+    grid-area: face;
+    position: relative;
+
+    & h5 {
+
+        position: absolute;
+        top: 0;
+        left: 15px;
+        font-size: medium;
+        color: white;
+
+    }
+}
+
+.YoutubeImg {
+
+    grid-area: youTube;
+    position: relative;
+
+    & h5 {
+
+        position: absolute;
+        top: 0;
+        left: 15px;
+        font-size: medium;
+        color: white;
+
+    }
+}
+
+.CommunityList {
+
+    grid-area: community;
+    position: relative;
+    left: 90px;
+
+    & h4 {
+
+        padding: 10px;
+
+        & ul {
+
+            display: flex;
+            flex-direction: column;
+
+            & li {
+
+                border-top: 1px solid #ccc;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & a {
+
+                    color: #666;
+                    padding: 10px;
+                    font-size: small;
+                    padding-right: 120px;
+
+                }
+            }   
+        }
+    }    
+}
+
+.promos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    border-top: 1px solid #b4b4b4;
+    margin: 70px;
+}
+
+.promoitem {
+    border-right: 1px solid #d4d4d4;
+    padding-right: 35px;
+}
+
+.tittlepromo {
+    & a {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        font-size: small;
+        color: #666;
+        & i {
+            display: flex;
+            width: 24px;
+            height: 25px;
+            background-color: black;
+            border: rgba(212, 212, 212, 0.2) 4px solid;
+            background-clip: padding-box; 
+            color: rgb(192, 192, 192);
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}
+/*
+
+
+
+*/
+
+/*--- MEDIA QUERIES ---*/
+
+@media (max-width:768px) {
+
+    main img {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .CommunityMain {
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "face"
+        "youTube"
+        "community" 
+        "social";
+    }
+
+    .SocialMediaList {grid-area: social;}
+    .FacebookImg {grid-area: face;}
+    .YoutubeImg {grid-area: youTube;}       
+    .CommunityList {
+        grid-area: community;
+        left: 0;
+    }
+}

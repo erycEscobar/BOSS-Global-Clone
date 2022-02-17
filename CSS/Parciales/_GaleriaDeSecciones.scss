@@ -11,14 +11,6 @@ h5 {
     font-size: 40px;
 }
 
-.linea {
-    background: #999999;
-    height: 1px;
-    width: 90%;
-    display: block;
-    margin: auto;
-}
-
 .galeria {
     @extend .GridFormat;
     grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));

@@ -2,17 +2,35 @@
 
 .grid3Gallery {
     background-color: white;
+    position: relative;
+    max-width: 1600px;
+    margin: auto;
+    
     & .format {
+        position: relative;
+        width: 100%;
         display: flex;
-        width: 95%;
-        margin: auto;
         gap: 10px;
-        padding: 50px 0px;
+        padding: 20px 0px 154px 0px;
         justify-content: center;
+        align-items: flex-start;
         & .element {
+            max-width:380px;
+            width: 100%;
+            &:hover {
+                & .moreBoton a {
+                    color: #0064ff;
+                }
+
+                & .moreBoton a i {
+                    color: #0064ff;
+                }
+            }
             & img {
                 vertical-align: top;
                 object-fit: cover;
+                max-width: 380px;
+                width: 100%;
 
             }
             & .subtitle {
@@ -22,16 +40,17 @@
                 padding-top: 20px;
             }
             & .title {
+
                 font-weight: bold;
-                color: rgb(114, 114, 114);
+                color: rgb(128, 128, 128);
                 padding-top: 5px;
-                font-size: 17px;
+                font-size: 15px;
             }
             & .description {
-                width: 380px;
+
                 color: black;
                 font-size: 12px;
-                padding-top: 15px;
+                padding: 15px 0 15px 0;
                 
             }
             & .moreBoton {
@@ -43,13 +62,13 @@
                     color: black;
                     & i {
                         display: flex;
-                        width: 25px;
+                        width: 24px;
                         height: 25px;
                         background-color: black;
                         border: rgba(212, 212, 212, 0.2) 4px solid;
                         background-clip: padding-box; 
                         color: rgb(192, 192, 192);
-                        justify-content: center;
+                        justify-content: flex-end;
                         align-items: center;
                     }
                 }
@@ -57,4 +76,49 @@
             }
         }
     }
+}
+
+.linea {
+    background: #ccc;
+    height: 1px;
+    width: 72%;
+    display: block;
+    margin: auto;
+}
+
+/* --- MEDIA QUERIES ---*/
+
+@media (max-width:1280px) {
+
+}
+
+@media (max-width:1024px) {
+    
+}
+
+@media (max-width:768px) {
+
+    .grid3Gallery {
+        & .format {
+            padding-bottom: 35px;
+            flex-wrap: wrap;
+            & .element {
+                max-width:360px;
+                width: 100%;
+                & img {
+                    max-width:360px;
+                    width: 100%;
+                }
+                & .subtitle {
+                    display: none;
+                }
+                & .description {
+                    display: none;
+                }
+                & .moreBoton {
+                    display: none;
+                }
+            }
+        }
+    }  
 }

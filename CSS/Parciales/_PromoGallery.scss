@@ -1,0 +1,15 @@
+
+.promoGallery {
+    display: none;
+    position: relative;
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+    & ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

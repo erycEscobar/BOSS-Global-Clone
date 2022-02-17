@@ -1,10 +1,12 @@
 /* --- CARROUSEL --- */
 
 #contCarrousel {
+    display: flex;
     overflow: hidden;
+    height: 650px;
+    position: relative;
+    flex-direction: column;
     margin: auto;
-    height: 600px;
-    min-width: 1024px;
     max-width: 1600px;
 }
 
@@ -22,6 +24,23 @@
     }
 }
 
+.CarrouselOverTittle {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & a {
+        color: white;
+        font-weight: 400;
+        font-size: 4.5rem;
+    }
+}
+
 .flechasCarrousel {
     position: absolute;
     top: 0;
@@ -30,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
+
     & a i {
         display: flex;
         width: 40px;
@@ -49,18 +68,49 @@
 }
 
 #contPuntos {
-    max-width: 97.3%;
+    position: relative;
+    max-width: 1600px;
     margin: auto;
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
     & a {
+        display: block;
+        padding: 17px 11px 17px 11px;
         text-decoration: none;
         font-size: 1em;
-        color: rgb(161, 161, 161);
-        margin: 10px;
+        color: #ccc;
         &:hover {
             color: #0064ff;
+        }
+    }
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (max-width:1280px) {
+
+}
+
+@media (max-width:1024px) {
+
+    #contCarrousel {
+        height: 450px;
+    }
+}
+
+@media (max-width:768px) {
+
+    #contCarrousel {
+        height: 240px;
+    }
+
+    .imgCarrousel {
+        & img {
+            max-width: 768px;
+            width: 100%;
         }
     }
 }
